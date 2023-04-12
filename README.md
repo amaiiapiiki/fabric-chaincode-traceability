@@ -1,6 +1,13 @@
 # Hyperledger Fabric Smart Contract
 This is a smart contract built on the Hyperledger Fabric blockchain platform. This contract provides a set of functions that can be called by authorized users to interact with the blockchain.
 
+## Index
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Internal functions](#internal-functions)
+4. [Public functions](#public-functions)
+
 ## Installation
 To install the smart contract, first ensure that you have the necessary dependencies installed:
 
