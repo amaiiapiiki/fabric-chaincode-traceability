@@ -1,0 +1,83 @@
+CREATE LOCATIONS
+{
+    "arg0": "L01",
+    "arg1": "Warehouse producer",
+    "arg2": "WAREHOUSE",
+    "arg3": "43.3",
+    "arg4": "-2.9",
+    "arg5": "{\"Tenperature\":\"12\", \"Humidity\": \"50\"}"
+}
+{
+    "arg0": "L02",
+    "arg1": "Vehicle",
+    "arg2": "VEHICLE",
+    "arg3": "43.3",
+    "arg4": "-2.9",
+    "arg5": "{\"Tenperature\":\"12\", \"Humidity\": \"50\"}"
+}
+{
+    "arg0": "L03",
+    "arg1": "Warehouse manufacturer",
+    "arg2": "WAREHOUSE",
+    "arg3": "43.3",
+    "arg4": "-2.9",
+    "arg5": "{\"Tenperature\":\"12\", \"Humidity\": \"50\"}"
+}
+{
+    "arg0": "L04",
+    "arg1": "Warehouse retailer",
+    "arg2": "WAREHOUSE",
+    "arg3": "43.3",
+    "arg4": "-2.9",
+    "arg5": "{\"Tenperature\":\"12\", \"Humidity\": \"50\"}"
+}
+
+PRODUCE INGREDIENT
+{
+  "arg0": "I01",
+  "arg1": "Ingredient 1",
+  "arg2": "Testing produce ingredient",
+  "arg3": "5786457446L",
+  "arg4": "L01",
+  "arg5": "{\"Tenperature\":\"12\", \"Humidity\": \"50\"}"
+}
+
+START SHIPMENT
+{
+  "arg0": "I01",
+  "arg1": "INGREDIENT",
+  "arg2": "courier1MSP",
+  "arg3": "L02",
+  "arg4": "L03"
+}
+
+FINISH SHIPMENT
+{
+  "arg0": "I01",
+  "arg1": "INGREDIENT",
+  "arg2": "floretteMSP",
+  "arg3": "L03"
+}
+
+VALIDATE FINISH SHIPMENT
+{
+  "arg0": "I01",
+  "arg1": "INGREDIENT"
+}
+
+MANUFACTURE PRODUCT
+{
+  "arg0": "P01",
+  "arg1": "Product 1",
+  "arg2": "Testing manufacture",
+  "arg3": "{\"array\": [\"I01\"]}",
+  "arg4": "87596567457",
+  "arg5": "L03",
+  "arg6": "[{\"Tenperature\":\"12\"}, {\"Humidity\": \"50\"}]"
+}
+
+UPDATE INGREDIENT LOCATION
+{
+  "arg0": "I01",
+  "arg1": "L04"
+}
